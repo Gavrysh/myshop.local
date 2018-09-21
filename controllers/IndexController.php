@@ -6,6 +6,7 @@
 
 // Під'єднуємо моделі
 require_once '../models/CategoriesModel.php';
+require_once '../models/ProductsModel.php';
 
 function testAction()
 {
@@ -19,6 +20,7 @@ function testAction()
 function indexAction($smarty)
 {
     $rsCategories = getAllMainCatsWithChildren();
+    $rsProducts = getLastProducts(16); // виборка останніх 16 товарів
 
     $smarty->assign('pageTitle', 'Головна сторінка сайту');
     $smarty->assign('rsCategories', $rsCategories);

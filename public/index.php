@@ -2,7 +2,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-require_once '../config/config.php'; // Ініціалізація налаштувань
+require_once '../config/config.php';          // Ініціалізація налаштувань
+require_once '../config/db.php';              // Ініціалізація бази даних
 require_once  '../library/mainFunctions.php'; // Основні функції
 
 // Визначаємо, з яким контролером будемо працювати

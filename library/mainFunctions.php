@@ -15,7 +15,7 @@ function wtf($value, $die = 1)
     echo '</pre>';
 
     if($die) {
-        $die;
+        exit();
     }
 }
 /**
@@ -42,4 +42,24 @@ function loadPage($smarty, $controllerName, $actionName = 'index')
 function loadTemplate($smarty, $templateName)
 {
     $smarty->display($templateName.TemplatePostfix);
+}
+
+/**
+ * Перетворення результау роботи функції виборки у асоциативний масив
+ *
+ * @param recordset $rs - набір рядків (результат роботи SELECT)
+ * @return array|bool
+ */
+function createSmartyRsArray($rs)
+{
+    if (!$rs) {
+        return false;
+    }
+
+    $smartyRs = [];
+    while ($row = mysqli_fetch_assoc($rs)) {
+        $smartyRs[] = $row;
+    }
+
+    return $smartyRs;
 }

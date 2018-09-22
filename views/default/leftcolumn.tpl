@@ -5,10 +5,10 @@
             Меню:
         </div>
         {foreach $rsCategories as $item}
-            <a href="#">{$item['name']}</a><br>
+            <a href="/?controller=category&id={$item['id']}">{$item['name']}</a><br>
             {if isset($item['children'])}
                 {foreach $item['children'] as $itemChild}
-                    --<a href="#">{$itemChild['name']}</a><br>
+                    --<a href="/?controller=category&id={$itemChild['id']}">{$itemChild['name']}</a><br>
                 {/foreach}
             {/if}
         {/foreach}

@@ -1,30 +1,30 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2018-09-21 12:47:24
+<?php /* Smarty version Smarty-3.1.6, created on 2018-09-22 11:56:07
          compiled from "../views/default/header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:6434850285ba4be2c4a8f65-30199852%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:16694723045ba54a1405d504-85155730%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '3dbdba5b3e744fb99042215648705161ce6110d6' => 
     array (
       0 => '../views/default/header.tpl',
-      1 => 1537523053,
+      1 => 1537606563,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '6434850285ba4be2c4a8f65-30199852',
+  'nocache_hash' => '16694723045ba54a1405d504-85155730',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5ba54a144934d',
   'variables' => 
   array (
     'pageTitle' => 0,
     'templateWebPath' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_5ba4be2c8984d',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5ba4be2c8984d')) {function content_5ba4be2c8984d($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5ba54a144934d')) {function content_5ba54a144934d($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="uk-UA">
 <head>
     <title><?php echo $_smarty_tpl->tpl_vars['pageTitle']->value;?>
@@ -41,6 +41,4 @@ css/main.css" type="text/css">
 
 
 <!-- Центральна частина (контент) -->
-<div id="centerColumn">
-    Центральна частина (контент)
-<?php }} ?>
+<div id="centerColumn"><?php }} ?>

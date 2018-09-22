@@ -1,33 +1,54 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2018-09-21 12:47:24
+<?php /* Smarty version Smarty-3.1.6, created on 2018-09-22 08:06:51
          compiled from "../views/default/leftcolumn.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:20312374185ba4be2c89d5c8-88715700%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2423198315ba54a149083d9-23325492%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '6a4906898c9ccedff76f3f82fc475b9a1c851a9e' => 
     array (
       0 => '../views/default/leftcolumn.tpl',
-      1 => 1537522927,
+      1 => 1537561200,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '20312374185ba4be2c89d5c8-88715700',
+  'nocache_hash' => '2423198315ba54a149083d9-23325492',
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_5ba4be2c8b953',
+  'unifunc' => 'content_5ba54a149e238',
+  'variables' => 
+  array (
+    'rsCategories' => 0,
+    'item' => 0,
+    'itemChild' => 0,
+  ),
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5ba4be2c8b953')) {function content_5ba4be2c8b953($_smarty_tpl) {?><!-- Лівий стовпчик -->
+<?php if ($_valid && !is_callable('content_5ba54a149e238')) {function content_5ba54a149e238($_smarty_tpl) {?><!-- Лівий стовпчик -->
 <div id="leftColumn">
     <div id="leftMenu">
         <div class="menuCaption">
             Меню:
         </div>
-        Пункт 1<br>
-        Пункт 2<br>
-        Пункт 3<br>
+        <?php  $_smarty_tpl->tpl_vars['item'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['item']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['rsCategories']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['item']->key => $_smarty_tpl->tpl_vars['item']->value){
+$_smarty_tpl->tpl_vars['item']->_loop = true;
+?>
+            <a href="#"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+</a><br>
+            <?php if (isset($_smarty_tpl->tpl_vars['item']->value['children'])){?>
+                <?php  $_smarty_tpl->tpl_vars['itemChild'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['itemChild']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['item']->value['children']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['itemChild']->key => $_smarty_tpl->tpl_vars['itemChild']->value){
+$_smarty_tpl->tpl_vars['itemChild']->_loop = true;
+?>
+                    --<a href="#"><?php echo $_smarty_tpl->tpl_vars['itemChild']->value['name'];?>
+</a><br>
+                <?php } ?>
+            <?php }?>
+        <?php } ?>
     </div>
 </div> 
 <?php }} ?>

@@ -24,6 +24,7 @@ function indexAction($smarty)
 
     $smarty->assign('pageTitle', 'Головна сторінка сайту');
     $smarty->assign('rsCategories', $rsCategories);
+    $smarty->assign('rsProducts', $rsProducts);
 
     loadTemplate($smarty, 'header');
     loadTemplate($smarty, 'index');

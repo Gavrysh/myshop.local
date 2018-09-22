@@ -17,7 +17,7 @@ function getLastProducts($limit = null)
         $sql .= " LIMIT {$limit}";
     }
 
-    $rs = mysqli_query($sql);
+    $rs = mysqli_query($GLOBALS['db'], $sql);
 
     return createSmartyRsArray($rs);
 }

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.6, created on 2018-09-22 19:59:37
+=======
+<?php /* Smarty version Smarty-3.1.6, created on 2018-09-23 08:51:59
+>>>>>>> feature/new
          compiled from "../views/default/leftcolumn.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:8636399185ba6749b0ae127-22071110%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (

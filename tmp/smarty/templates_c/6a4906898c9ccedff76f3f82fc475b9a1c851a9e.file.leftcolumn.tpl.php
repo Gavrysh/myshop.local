@@ -1,22 +1,26 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2018-09-22 17:15:18
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.6, created on 2018-09-22 19:59:37
+=======
+<?php /* Smarty version Smarty-3.1.6, created on 2018-09-23 08:51:59
+>>>>>>> feature/new
          compiled from "../views/default/leftcolumn.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:18317278825ba64cf5cdb553-21625835%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:8636399185ba6749b0ae127-22071110%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '6a4906898c9ccedff76f3f82fc475b9a1c851a9e' => 
     array (
       0 => '../views/default/leftcolumn.tpl',
-      1 => 1537625713,
+      1 => 1537635569,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '18317278825ba64cf5cdb553-21625835',
+  'nocache_hash' => '8636399185ba6749b0ae127-22071110',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_5ba64cf5d62d5',
+  'unifunc' => 'content_5ba6749b12e37',
   'variables' => 
   array (
     'rsCategories' => 0,
@@ -25,7 +29,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5ba64cf5d62d5')) {function content_5ba64cf5d62d5($_smarty_tpl) {?><!-- Лівий стовпчик -->
+<?php if ($_valid && !is_callable('content_5ba6749b12e37')) {function content_5ba6749b12e37($_smarty_tpl) {?><!-- Лівий стовпчик -->
 <div id="leftColumn">
     <div id="leftMenu">
         <div class="menuCaption">
@@ -36,8 +40,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 foreach ($_from as $_smarty_tpl->tpl_vars['item']->key => $_smarty_tpl->tpl_vars['item']->value){
 $_smarty_tpl->tpl_vars['item']->_loop = true;
 ?>
-            <a href="/?controller=category&id=<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+            <a href="/category/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+/"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
 </a><br>
             <?php if (isset($_smarty_tpl->tpl_vars['item']->value['children'])){?>
                 <?php  $_smarty_tpl->tpl_vars['itemChild'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['itemChild']->_loop = false;
@@ -45,8 +49,8 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 foreach ($_from as $_smarty_tpl->tpl_vars['itemChild']->key => $_smarty_tpl->tpl_vars['itemChild']->value){
 $_smarty_tpl->tpl_vars['itemChild']->_loop = true;
 ?>
-                    --<a href="/?controller=category&id=<?php echo $_smarty_tpl->tpl_vars['itemChild']->value['id'];?>
-"><?php echo $_smarty_tpl->tpl_vars['itemChild']->value['name'];?>
+                    --<a href="/category/<?php echo $_smarty_tpl->tpl_vars['itemChild']->value['id'];?>
+/"><?php echo $_smarty_tpl->tpl_vars['itemChild']->value['name'];?>
 </a><br>
                 <?php } ?>
             <?php }?>

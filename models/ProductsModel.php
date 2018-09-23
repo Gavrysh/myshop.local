@@ -38,3 +38,20 @@ function getProductsByCat($itemId)
 
     return createSmartyRsArray($rs);
 }
+
+/**
+ * Отримати дані продукта по id
+ *
+ * @param integer $itemId - id продукта
+ * @return array|bool - масив даних продукта
+ */
+function getProductById($itemId)
+{
+    $itemId = intval($itemId);
+
+    $sql = "SELECT * FROM products WHERE id = '{$itemId}'";
+
+    $rs = mysqli_query($GLOBALS['db'], $sql);
+
+    return mysqli_fetch_assoc($rs);
+}
